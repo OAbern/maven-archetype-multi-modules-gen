@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0
+                            http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd
+                            http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 "
+                      name="archetype-multi-modules-gen-demo">
+    <!-- 生成项目模板时必填的参数列表 -->
+    <requiredProperties>
+        <requiredProperty key="groupId">
+            <defaultValue>com.zhubajie.oabern</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="artifactId">
+        </requiredProperty>
+        <requiredProperty key="version">
+            <defaultValue>1.0-SNAPSHOT</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="package">
+            <defaultValue>com.zhubajie.oabern</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+    <!-- 多模块配置 -->
+    <modules>
+        <module id="${rootArtifactId}-biz" dir="__rootArtifactId__-biz" name="${rootArtifactId}-biz">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.**</include>
+                    </includes>
+                </fileSet>
+
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/test/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>**/*.**</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="${rootArtifactId}-common" dir="__rootArtifactId__-common" name="${rootArtifactId}-common">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.**</include>
+                    </includes>
+                </fileSet>
+
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/test/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>**/*.**</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="${rootArtifactId}-dal" dir="__rootArtifactId__-dal" name="${rootArtifactId}-dal">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.**</include>
+                    </includes>
+                </fileSet>
+
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/test/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>**/*.**</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="${rootArtifactId}-web" dir="__rootArtifactId__-web" name="${rootArtifactId}-web">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**</include>
+                        <include>**/*.**</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/webapp</directory>
+                    <includes>
+                        <include>**</include>
+                        <include>**/*.**</include>
+                    </includes>
+                </fileSet>
+
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/test/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>**/*.**</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="depoly" dir="depoly" name="depoly">
+
+        </module>
+    </modules>
+
+</archetype-descriptor>
