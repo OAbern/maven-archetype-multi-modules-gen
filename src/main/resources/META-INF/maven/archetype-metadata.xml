@@ -123,14 +123,18 @@
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/main/resources</directory>
                     <includes>
-                        <include>**</include>
+                        <include>**/*.**</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/resources/props</directory>
+                    <includes>
                         <include>**/*.**</include>
                     </includes>
                 </fileSet>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/main/webapp</directory>
                     <includes>
-                        <include>**</include>
                         <include>**/*.**</include>
                     </includes>
                 </fileSet>
